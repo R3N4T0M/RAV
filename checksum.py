@@ -4,7 +4,11 @@ def somaip(ip):
         segundo = (int(c) << 8) + int(d)
         binpri = bin(primeiro)
         binseg = bin(segundo)
-        return binpri, binseg
+        if len(binseg)<18:
+                y=18-len(binseg)
+                z='0'*y
+                total=z+binseg
+        return binpri, total
 
 a= input()
 
